@@ -1,4 +1,4 @@
-use_inline_resources if Chef::VERSION >= "11.0.0"
+use_inline_resources if defined?(use_inline_resources)
 
 action :delete do
   file "/etc/cron.d/#{new_resource.name}" do
